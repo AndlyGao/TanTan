@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xuyijie.module_lib">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".post.UserPostTopicActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".post.UserPicturePostActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".base.VoicePostActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name=".conversation.SingleConversationActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+    </application>
+
+</manifest>

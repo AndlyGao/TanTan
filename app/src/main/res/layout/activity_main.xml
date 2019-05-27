@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/index_fl_bottom_bar"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/index_fl_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:id="@+id/view_msg"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/bottom_home_main"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="主页"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rb_resource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/bottom_home_shopcar"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="圈子"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            </FrameLayout>
+
+            <RadioButton
+                android:id="@+id/rb_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/bottom_home_message"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="消息"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rb_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/bottom_home_user"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="个人"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/index_bottom_bar_scan"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_58"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dp_10"
+        android:src="@mipmap/mainactivity_publish_publish" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1" />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_navigator_height">8dp</dimen>
+    <dimen name="item_menu_title_margin">5dp</dimen>
+    <dimen name="item_menu_word_size">16sp</dimen>
+    <dimen name="item_menu_top_magin">16dp</dimen>
+    <dimen name="item_dish_word_size">18sp</dimen>
+    <dimen name="item_dish_small_word_size">18sp</dimen>
+    <dimen name="item_dish_money_size">12sp</dimen>
+    <dimen name="item_dish_top_margin">5dp</dimen>
+    <dimen name="item_dish_horizontal_margin">15dp</dimen>
+    <dimen name="item_dish_small_horizontal_margin">2dp</dimen>
+    <dimen name="item_dish_menu_hight">25dp</dimen>
+    <dimen name="item_dish_hight">55dp</dimen>
+    <dimen name="item_dish_account_width">30dp</dimen>
+    <dimen name="item_dish_circle_size">25dp</dimen>
+    <dimen name="min_panel_height">220dp</dimen>
+    <dimen name="max_panel_height">380dp</dimen>
+    <dimen name="more_window_item_margin">12.0dip</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="content_horizontal_margin">10dp</dimen>
+    <dimen name="content_vertical_margin">10dp</dimen>
+    <dimen name="content_small">5dp</dimen>
+
+    <dimen name="text_title">19sp</dimen>
+    <dimen name="text_subhead">17sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_caption">13sp</dimen>
+    <dimen name="line_height">1dp</dimen>
+    <dimen name="fab_icon_size">24dp</dimen>
+
+    <dimen name="fab_plus_icon_size">14dp</dimen>
+    <dimen name="fab_plus_icon_stroke">2dp</dimen>
+
+    <dimen name="fab_shadow_offset">3dp</dimen>
+    <dimen name="fab_shadow_radius">9dp</dimen>
+
+    <dimen name="fab_stroke_width">1dp</dimen>
+
+    <dimen name="fab_actions_spacing">16dp</dimen>
+    <dimen name="fab_labels_margin">8dp</dimen>
+
+</resources>

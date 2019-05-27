@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_55"
+    android:id="@+id/tv_item"
+    android:text="王者荣耀"
+    android:textColor="#000"
+    android:gravity="center|left"
+    android:textSize="15sp"
+    android:paddingLeft="@dimen/dp_10"
+    android:drawableLeft="@mipmap/moment_topic_ic">
+
+</TextView>

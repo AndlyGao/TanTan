@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".conversation.SingleConversationActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/detail_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:background="#fff">
+
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_15"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/iv_close"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:maxLength="11"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="11sp"
+            android:id="@+id/tv_line"
+            android:text=""
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_5"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_title" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:id="@+id/iv_line"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_offline"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_line"/>
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:padding="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_10"
+            android:text=""
+            android:textColor="#000"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_detail_recycle_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/message_detail_bottom"
+        android:layout_below="@id/detail_bar"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        android:transcriptMode="alwaysScroll" />
+
+    <RelativeLayout
+        android:id="@+id/message_detail_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#33DCDCDC">
+
+        <Button
+            android:id="@+id/btn_message_send"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/robot_send_btn_bg"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/et_message_input"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/btn_message_send"
+            android:background="@drawable/et_conversation_bg"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>

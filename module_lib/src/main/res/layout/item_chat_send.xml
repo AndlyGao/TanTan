@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_160"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="16dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="demo_9999"
+                android:textColor="#cccccc"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:id="@+id/chat_item_progress"
+                    style="@android:style/Widget.ProgressBar.Small.Inverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left|center"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_toLeftOf="@+id/item_msg" />
+                <TextView
+                    android:id="@+id/tv_read"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:text="已读"
+                    android:layout_toLeftOf="@+id/item_msg"
+                    android:layout_marginRight="@dimen/dp_4" />
+                <TextView
+                    android:id="@+id/item_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@drawable/bg_popo_right"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="mmm"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/head_bg"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_margin="16dp"
+            android:gravity="center">
+
+            <com.xuyijie.module_lib.view.CircleImageView
+                android:id="@+id/head_img"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_48"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/t7_share_xiaoku_tab" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

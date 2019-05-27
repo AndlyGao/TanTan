@@ -1,0 +1,104 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'com.jakewharton.butterknife'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
+
+        lintOptions {
+            abortOnError false
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        packagingOptions {
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/rxjava.properties'
+            exclude 'META-INF/NOTICE.txt'
+        }
+        ndk {
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a', 'mips', 'mips64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false   //开启混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs', '../module_lib/libs'
+    }
+}
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    api rootProject.ext.dependencies["support-v4"]
+    api rootProject.ext.dependencies["design"]
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+    api rootProject.ext.dependencies["SmartRefreshLayout"]
+    implementation rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    testImplementation 'junit:junit:4.12'
+    api rootProject.ext.dependencies["MagicIndicator"]
+    api 'com.squareup.okio:okio:2.1.0'
+    api 'com.squareup.okhttp3:okhttp:3.12.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    api 'io.reactivex.rxjava2:rxjava:2.2.2'
+    api 'cn.bmob.android:bmob-sdk:3.7.3-rc1'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'io.reactivex:rxandroid:1.2.1'
+    api 'io.reactivex:rxjava:1.3.0'
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["MZBannerView"]
+    api rootProject.ext.dependencies["cardview"]
+    api rootProject.ext.dependencies["marqueelibrary"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["android-gif-drawable"]
+    api rootProject.ext.dependencies["crashreport_upgrade"]
+    api rootProject.ext.dependencies["nativecrashreport"]
+    api rootProject.ext.dependencies["jpush"]
+    api rootProject.ext.dependencies["jcore"]
+    api rootProject.ext.dependencies["jmessage"]
+    api 'com.jakewharton:butterknife:8.8.1'
+    api 'com.bigkoo:alertview:1.0.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    api 'com.flipboard:bottomsheet-core:1.5.1'
+    api 'com.amap.api:3dmap:5.0.0'
+    api 'com.amap.api:location:3.3.0'
+    api 'com.amap.api:search:5.0.0'
+    implementation project(':module_picture')
+    api 'org.greenrobot:eventbus:3.1.1'
+    api files('libs/bdasr_V3_20190327_58c9395.jar')
+    api files('libs/mta-sdk-1.6.2.jar')
+    api files('libs/open_sdk_r5788_lite.jar')
+}

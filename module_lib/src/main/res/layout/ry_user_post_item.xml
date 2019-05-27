@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8"
+    android:background="#fff"
+    android:padding="@dimen/dp_8">
+
+    <com.xuyijie.module_lib.view.CircleImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:text="哟用户忙"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_sex"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_toRightOf="@+id/tv_username"
+        android:src="@mipmap/user_ic_16_female" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_marginRight="@dimen/dp_10"
+    android:background="@drawable/tv_user_post_observe_bg"
+    android:paddingRight="@dimen/dp_15"
+    android:paddingLeft="@dimen/dp_15"
+    android:paddingTop="@dimen/dp_3"
+    android:paddingBottom="@dimen/dp_3"
+    android:layout_height="wrap_content"
+    android:text="关注"
+    android:textColor="#72D0D0"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="@dimen/dp_28"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_avatar"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@drawable/user_post_type_bg"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:text="标题"
+        android:textColor="#77D1D1"
+        android:textSize="14.5sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="测试"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ry_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="@dimen/dp_5" />
+
+    <CheckBox
+        android:id="@+id/cb_like"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@+id/ry_picture"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="5"
+        android:gravity="center"
+        android:button="@null"
+        android:textColor="#D4D4DD"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:drawableLeft="@drawable/cb_user_post_like_bg" />
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@+id/ry_picture"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_toRightOf="@+id/cb_like"
+        android:drawableLeft="@mipmap/moment_list_comment_normal"
+        android:drawablePadding="@dimen/dp_8"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="#D4D4DD" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_below="@+id/ry_picture"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/home_video_more_ic"/>
+</RelativeLayout>

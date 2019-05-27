@@ -1,0 +1,31 @@
+package com.xuyijie.module_home.view;
+
+import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.xuyijie.module_home.R;
+import com.xuyijie.module_lib.base.BaseFragment;
+import com.xuyijie.module_lib.presenter.EmptyPresenter;
+
+public class ObserveFragment extends BaseFragment<EmptyPresenter> {
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initView(View view, ViewGroup container, Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public int initLayout() {
+        return R.layout.fragment_observe;
+    }
+
+    @Override
+    public EmptyPresenter initPresenter() {
+        return null;
+    }
+}
